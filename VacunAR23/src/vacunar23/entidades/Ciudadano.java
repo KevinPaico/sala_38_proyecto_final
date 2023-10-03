@@ -17,8 +17,9 @@ public class Ciudadano {
     private String celular;
     private String patologia;
     private String ambitoTrabajo;
+    private boolean activo;
 
-    public Ciudadano(int idCiudadano, int dni, String nombreCompleto, String email, String celular, String patologia, String ambitoTrabajo) {
+    public Ciudadano(int idCiudadano, int dni, String nombreCompleto, String email, String celular, String patologia, String ambitoTrabajo, boolean activo) {
         this.idCiudadano = idCiudadano;
         this.dni = dni;
         this.nombreCompleto = nombreCompleto;
@@ -28,7 +29,7 @@ public class Ciudadano {
         this.ambitoTrabajo = ambitoTrabajo;
     }
 
-    public Ciudadano(int dni, String nombreCompleto, String email, String celular, String patologia, String ambitoTrabajo) {
+    public Ciudadano(int dni, String nombreCompleto, String email, String celular, String patologia, String ambitoTrabajo, boolean activo) {
         this.dni = dni;
         this.nombreCompleto = nombreCompleto;
         this.email = email;
@@ -96,8 +97,17 @@ public class Ciudadano {
         this.ambitoTrabajo = ambitoTrabajo;
     }
 
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
     @Override
     public String toString() {
-        return "Ciudadano{" + "idCiudadano=" + idCiudadano + ", dni=" + dni + ", nombreCompleto=" + nombreCompleto + ", email=" + email + ", celular=" + celular + ", patologia=" + patologia + ", ambitoTrabajo=" + ambitoTrabajo + '}';
+        return "Ciudadano{" + "idCiudadano=" + idCiudadano + ", dni=" + dni + ", nombreCompleto=" + nombreCompleto + ", email=" + email + ", celular=" + celular + ", patologia=" + patologia + ", ambitoTrabajo=" + ambitoTrabajo + ", activo=" + activo + '}';
     }
+    
 }

@@ -5,6 +5,9 @@
  */
 package vacunar23;
 
+import vacunar23.acceso_a_datos.CiudadanoData;
+import vacunar23.entidades.Ciudadano;
+
 /**
  *
  * @author Equipo
@@ -16,6 +19,9 @@ public class VacunAR23 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        CiudadanoData cd = new CiudadanoData();
+        Ciudadano k = new Ciudadano(45829173, "Kanye L", "kawiest@hotmail.com", "3581930582", null, "Singer", true);
+        cd.modificarCiudadano(k);
     }
     
 }
